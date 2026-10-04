@@ -112,7 +112,7 @@ button, input { font: inherit; }
 
 @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-@page { size: landscape; margin: 0.4in; }
+@page { size: letter portrait; margin: 0.5in; }
 
 @media print {
     body, .app-shell { min-height: 0; background: white !important; }
@@ -127,11 +127,11 @@ button, input { font: inherit; }
     .route-map-panel { min-width: 0; overflow: hidden; }
     .route-map-heading { display: block; }
     .route-print-summary { display: block; margin-top: 3px; color: #4b5149; font-size: 10px; }
-    .route-map { width: 100%; max-width: 100%; height: 4.5in !important; margin: 4px 0 0; overflow: hidden; }
+    .route-map { width: 6in !important; max-width: 6in; height: 3.1in !important; margin: 4px auto 0; overflow: hidden; }
     .route-map .js-plotly-plot, .route-map .plot-container, .route-map .svg-container { width: 100% !important; height: 100% !important; max-width: 100%; overflow: hidden !important; }
     .route-map .hoverlayer { display: none !important; }
     .route-stops-panel { display: none !important; }
-    .route-print-cities { display: block; margin-top: 0.12in; padding-top: 0.1in; border-top: 1px solid var(--line); color: var(--ink); font-size: 9px; line-height: 1.6; overflow-wrap: anywhere; }
+    .route-print-cities { display: block; margin-top: 0.12in; padding-top: 0.1in; border-top: 1px solid var(--line); color: var(--ink); font-size: 24pt; line-height: 1.2; overflow-wrap: anywhere; }
 }
 
 @media (max-width: 640px) {
