@@ -1,1 +1,2 @@
 dash>=4.4,<5
+gunicorn>=23,<24; sys_platform != "win32"

@@ -12,6 +12,7 @@ app = Dash(
     title="Dash Projects",
     update_title="Working...",
 )
+server = app.server
 
 UPLOAD_DIR = Path(__file__).resolve().parent / "generated" / ".uploads"
 
