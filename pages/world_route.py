@@ -138,6 +138,12 @@ def _make_stop_list(route):
     return html.Ol(items, className="route-stop-list")
 
 
+def _format_print_cities(route):
+    return "  ·  ".join(
+        f"{index:02} {city.label}" for index, city in enumerate(route, start=1)
+    )
+
+
 layout = html.Main(
     [
         html.A("<- All apps", href="/", className="back-link"),
@@ -235,6 +241,7 @@ layout = html.Main(
                                     config={"displayModeBar": False, "responsive": True},
                                     className="route-map",
                                 ),
+                                html.Div(id="world-route-print-cities", className="route-print-cities"),
                                 html.Div(id="world-route-print-status", className="visually-hidden", role="status"),
                             ],
                             className="route-map-panel",
@@ -263,6 +270,7 @@ layout = html.Main(
     Output("world-route-leg-count", "children"),
     Output("world-route-distance", "children"),
     Output("world-route-print-summary", "children"),
+    Output("world-route-print-cities", "children"),
     Input("world-route-start", "value"),
     Input("world-route-legs", "value"),
 )
@@ -276,6 +284,7 @@ def update_world_route(start_name, leg_count):
         str(leg_count),
         f"{distance:,.0f} km",
         f"{start.label}  |  {leg_count} legs  |  Approx. {distance:,.0f} km",
+        _format_print_cities(route),
     )
 
 
