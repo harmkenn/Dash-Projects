@@ -1,2 +1,12 @@
-dash>=4.4,<5
-gunicorn>=23,<24; sys_platform != "win32"
+# pip install -r requirements.txt
+# pip install -r requirements.txt --break-system-packages
+
+
+streamlit
+dash
+qrcode
+pandas
+streamlit_autorefresh
+qrcode[pil]
+pillow
+pyppeteer
