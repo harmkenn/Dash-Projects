@@ -10,3 +10,4 @@ streamlit_autorefresh
 qrcode[pil]
 pillow
 pyppeteer
+gunicorn
